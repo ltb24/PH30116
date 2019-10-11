@@ -1,0 +1,2 @@
+git config --global user.name "Luke Bischoff"
+git config --global user.email "ltb24@bath.ac.uk"
