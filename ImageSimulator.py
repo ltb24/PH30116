@@ -180,7 +180,7 @@ class SimuIma:
             raise InputError('psffluxrange needs to be of length 2')
         if len(bgrange) != 2:
             raise InputError('bgrange needs to be of length 2')
-        if len(fwhmrange) != 2:
+        if len(sigmarange) != 2:
             raise InputError('sigmarange needs to be of length 2')
         if len(ronrange) != 2:
             raise InputError('ronrange needs to be of length 2')
@@ -201,7 +201,7 @@ class SimuIma:
         self._practicedict['psf_y'] = []
         self._practicedict['psf_flux'] = []
         #get FWHM value and store
-        fwhm = numpy.random.uniform(sigmarange[0], sigmarange[1], 1)[0]
+        sigma = numpy.random.uniform(sigmarange[0], sigmarange[1], 1)[0]
         self._practicedict['sigma'] = sigma
         #add PSFs, looping
         for i in range(npsf):
